@@ -1,1 +1,1 @@
-# google_quickdraw_classification
+# Google's Quick Draw! Classification
