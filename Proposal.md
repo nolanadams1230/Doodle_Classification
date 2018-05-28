@@ -4,7 +4,7 @@ Computer Vision is a field of Artificial Intelligence and Computer Science that 
 2. Potential lifesaving uses such as [Medical startups](https://www.wired.com/2017/01/look-x-rays-moles-living-ai-coming-job/) that claim they’ll soon be able to use computers to read X-rays, MRIs, and CT scans more rapidly and accurately than radiologists.
 3. And borderline unethical uses such as [Facial Recognition in police body cams](https://www.washingtonpost.com/news/the-switch/wp/2018/04/26/facial-recognition-may-be-coming-to-a-police-body-camera-near-you/?noredirect=on&utm_term=.1a5df1611adc)
 
-With so many emerging and interesting uses of Computer Vision, my goal is to compare different machine learning algorithms from scikit-learn and Keras tasked with classifying drawings made from [Google's Quick Draw! dataset](https://quickdraw.withgoogle.com/data). By doing so I will showcase my abilities processing and analyzing the doodles through image classification and neural networks. This project is meant for companies that are interested in the field of Computer Vision and want to use my analysis and its algorithms to understand its capabilities. 
+With so many emerging and interesting uses of Computer Vision, my goal is to compare different machine learning algorithms from scikit-learn and Keras tasked with classifying drawings made from [Google's Quick Draw! dataset](https://quickdraw.withgoogle.com/data). By doing so I will showcase my abilities processing and analyzing the doodles through image classification and neural networks. This project is meant for companies that are interested in leveraging the Computer Vision methods used in my project in business.
 
 ## Data
 
