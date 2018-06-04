@@ -8,8 +8,7 @@ With so many emerging and interesting uses of Computer Vision, my goal is to com
 
 ## Data
 
-Google has capitalized on the use of crowdsourcing to label over 50 million drawings with their online game "Quick Draw!". It gives its users 20 seconds to draw one of 345 different categories that range from an aircraft carrier to a zig-zag. Recently, they have [open-sourced all their data](https://console.cloud.google.com/storage/browser/quickdraw_dataset/full/numpy_bitmap?pli=1) and I will randomly select 10 images to build my classifier. Each image contains X and Y coordinates for each stroke, the time taken to draw each stroke, whether the image was recognized by Google’s classifier, a two-letter country code for where the player was from, and the label.
-
+Google has capitalized on the use of crowdsourcing to label over 50 million drawings with their online game "Quick Draw!". It gives its users 20 seconds to draw one of 345 different classes that range from an aircraft carrier to a zig-zag. Recently, they have [open-sourced all their data](https://console.cloud.google.com/storage/browser/quickdraw_dataset/full/numpy_bitmap?pli=1) and I will select 10 images to build my classifier.The data we will use is a 28x28 grayscale bitmap in numpy .npy format of the simplified version of each drawing. We will load each classes seperately with np.load, add the label to the array, and combine them all before we make our train/test splits.  
 
 ## Approach
 
