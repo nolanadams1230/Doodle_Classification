@@ -9,7 +9,7 @@ With so many emerging and interesting uses of Computer Vision, my goal is to com
 
 
 
-## Data - InsideAirBnB.com
+## Data - Google's Quick-Draw
 
 Google has capitalized on the use of crowdsourcing to label over 50 million drawings with their online game "Quick Draw!". It gives its users 20 seconds to draw one of 345 different classes that range from an aircraft carrier to a zig-zag. Recently, they have open-sourced all their data and I will select 10 images to build my classifier. The data we used is a 28x28 grayscale bitmap in numpy .npy format of the simplified version of each drawing. 
 
