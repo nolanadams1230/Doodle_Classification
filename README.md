@@ -17,7 +17,7 @@ Google has capitalized on the use of crowdsourcing to label over 50 million draw
 
  - [Project Proposal](Proposal.md)
  
- - [Data Wrangling & Exploratory Analysis](Data_Wrangling_&_Exploratory_Analysis.md)
+ - [Data Wrangling & Exploratory Analysis](Data_Wrangling_&_Exploratory_Data_Analysis.md)
  
  - [Classification Modeling](Classification_Modeling.md)
  
