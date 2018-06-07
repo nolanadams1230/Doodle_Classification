@@ -1,8 +1,8 @@
 # Data Wrangling & Exploratory Data Analysis
 
-[Jupyter Notebook](http://nbviewer.jupyter.org/github/nolanadams1230/Airbnb_Prices_Ratings/blob/master/notebooks/Exploratory%20Data%20Analysis.ipynb)
+[Jupyter Notebook](http://nbviewer.jupyter.org/github/nolanadams1230/Doodle_Classification/blob/master/notebooks/Data%20Wrangling%20%26%20Exploratory%20Analysis%20-%20Doodles.ipynb)
 
-[Github](https://github.com/nolanadams1230/Airbnb_Prices_Ratings/blob/master/notebooks/Exploratory%20Data%20Analysis.ipynb)
+[Github](https://github.com/nolanadams1230/Doodle_Classification/blob/master/notebooks/Data%20Wrangling%20%26%20Exploratory%20Analysis%20-%20Doodles.ipynb)
 
 # Overview
 
