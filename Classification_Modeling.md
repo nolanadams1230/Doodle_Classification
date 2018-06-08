@@ -61,8 +61,7 @@ The model predict very well and the few images that were predicted wrong share v
 
 ## Transfer Learning VGG16
 
-Transfer learning focuses on storing knowledge gained while solving one problem and applying it to a different but related problem. The VGG neural network is an image classification convolutional neural network that was trained on an immense dataset with over 1000 images. The purpose of using this is to apply the optimized structure to our dataset, since it is a related problem and seeing how well the model performs compared to our model that was built from scratch.
-
-To get the VGG16 to work on our data we had to resize the height and width to a minimum of 48 and have a 3-color channel. We changed the input shape for each image to (56,56,3).
+Convolutional Networks are rarely built from scratch due to the amount of computational power it takes or not having enough samples per class. Transfer learning provides the ability to use pre-trained models learning as the inputs to your newly created model.
+Transfer learning is the ability to store knowledge gained while solving one problem and applying it to a different but related problem. The VGG neural network is an image classification convolutional neural network that was trained on over 1.2 Million images from the ImageNet set and spans over 1000 classes. To get the VGG16 to work on our dataset, we had to resize the height and width to a minimum of 48 and have a 3-color channel. We changed the input shape for each image to (56,56,3).
 
 Our resulting accuracy was **0.9213** which is even higher than our CNN model that was made from scratch. This just show how powerful and simple it could be to use pre-trained neural networks. 
