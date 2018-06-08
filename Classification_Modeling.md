@@ -55,7 +55,7 @@ Our final accuracy was **0.9095**, which shows how powerful deep learning is.
 
 ![CNN Predicted v True](images/cnn_predicted_true.png)
 
-Looking at
+The model predict very well and the few images that were predicted wrong share very similar shapes with the wrongly predicted image. Nail, Cannon, and Piano all have the base shape of a rectangle, and the drawing that are poorly drawn can confuse the model.
 
 ## Transfer Learning VGG16
 
