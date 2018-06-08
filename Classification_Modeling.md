@@ -10,7 +10,7 @@ For all the models, except the Convolutional Neural Network and the Transfer Lea
 
 ## K-Nearest Neighbors
 
-To start, I modeled the data with the k-Nearest Neighbor (k-NN) classifier, which is arguably the most simple, easy to understand machine learning algorithm. The k-NN algorithm classifies unknown data points by finding the most common class among the k-closest examples. Each data point in the k closest examples casts a vote and the category with the most votes is chosen.
+To start, I modeled the data with the k-Nearest Neighbor (k-NN) classifier, which is arguably the most simple, easy to understand machine learning algorithm. The k-NN algorithm classifies unknown data points by finding the most common class among the k-closest examples. Each data point in the k closest examples casts a vote and the category with the most votes is chosen. This model will serve as a good benchmark to compare the rest
 
 Using GridsearchCV and the elbow-method to tune the *k-neighbors* parameter we found that 3 neighbors seems like the best choice to avoid overfitting. The main advantage of the KNN algorithm is that it performs well with multi-modal classes because the basis of its decision is based on a small neighborhood of similar objects. This is why its results were fairly high with 80%. The main disadvantage is the computational cost are very high and the results take far too long. Also this classifier would not be ideal if we wanted to make predictions on the fly, since k-NN classifier trains the data fast but then makes predictions very slow.
 
@@ -43,5 +43,22 @@ The Multi-Layer Perceptron has an accuracy of **0.8299**, which so far is the be
 
 ## Convolutional Neural Networks (CNN / ConvNet)
 The Convolutional Neural Network architectures make the explicit assumption that the inputs are images, which allows us to encode certain properties into the architecture. These then make the forward function more efficient to implement and vastly reduce the amount of parameters in the network.
+
+The Architecture:
+- Our input for the CNN had a width of 28, height 28, and with three 1 channel (grayscale).(28, 28, 1). 
+- We used two CONV layers with RELU ad the activation function. 
+- We used a max pooling layer which reduces the spatial dimension of the feature map and hence also reduces the number of parameters high up the processing hierarchy. This simplifies the overall model complexity. 
+- We used two dropout layers as well which work as a regularization. When random neurons are dropped out, the network is forced to learn several independent representations of the patterns with identical input and output. The generalizability thus improves.
+- We then used two full connected layers that compute the class scores.
+
+Our final accuracy was **0.9095**, which shows how powerful deep learning is.
+
+![CNN Predicted v True](images/cnn_predicted_true.png)
+
+Looking at
+
+## Transfer Learning VGG16
+
+Transfer learning focuses on storing knowledge gained while solving one problem and applying it to a different but related problem. The VGG neural network is an image classification convolutional neural network that was trained on an immense dataset with over 1000 images. The purpose of using this is to apply the optmized structure to our dataset, since it is a related problem and seeing how well the model performs compared to our model that was built from scratch
 
 
