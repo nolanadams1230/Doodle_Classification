@@ -44,12 +44,14 @@ The Multi-Layer Perceptron has an accuracy of **0.8299**, which so far is the be
 ## Convolutional Neural Networks (CNN / ConvNet)
 The Convolutional Neural Network architectures make the explicit assumption that the inputs are images, which allows us to encode certain properties into the architecture. These then make the forward function more efficient to implement and vastly reduce the number of parameters in the network.
 
-The Architecture:
-- Our input for the CNN had a width of 28, height 28, and with three 1 channel (grayscale).(28, 28, 1). 
-- We used two CONV layers with RELU ad the activation function. 
-- We used a max pooling layer which reduces the spatial dimension of the feature map and hence also reduces the number of parameters high up the processing hierarchy. This simplifies the overall model complexity. 
-- We used two dropout layers as well which work as a regularization. When random neurons are dropped out, the network is forced to learn several independent representations of the patterns with identical input and output. The generalizability thus improves.
-- We then used two full connected layers that compute the class scores.
+We reshaped the input for the CNN into a 4-dimensional array with the shape of (# of doodles, width, height, and depth(color channel)) so that each image is a 3-dimensional image. Our final shape was (21000,28,28,1) because the color channel was greyscale. A simple ConvNet is a sequence of layers, and every layer of a ConvNet transforms one volume of activations to another through a differentiable function. We used a commonly used archtecture of INPUT -> (CONV -> RELU -> CONV -> RELU -> POOL) -> (DO ->FC -> RELU) -> (DO -> FC).
+- The first CONV layer we used a filter with 5 pixels width and height and then used with the ReLu activation function. We used the ReLu activation function becuase it is very simple and efficient and it avoids and rectifies vanishing gradient problem . Almost all deep learning Models use ReLu nowadays. The second CONV layer used 3 pixels width and height instead.
+- The two dropout layers are less common, but used as a regularization. When random neurons are dropped out, the network is forced to learn several independent representations of the patterns with identical input and output. The generalizability thus improves.
+- We then compiled the model using 20 epoches are the resulting training accuracy and loss and validation accuracy and loss can be seen in the image below.
+
+![CNN_Accuracy_and_Loss](images/cnn_accuracy.png)
+
+While it is possible to try many different possibilites, our results we impressive enough that any improvements would probabky not be worth the computational effort.
 
 Our final accuracy was **0.9095**, which shows how powerful deep learning is.
 
@@ -59,6 +61,8 @@ The model predict very well and the few images that were predicted wrong share v
 
 ## Transfer Learning VGG16
 
-Transfer learning focuses on storing knowledge gained while solving one problem and applying it to a different but related problem. The VGG neural network is an image classification convolutional neural network that was trained on an immense dataset with over 1000 images. The purpose of using this is to apply the optimized structure to our dataset, since it is a related problem and seeing how well the model performs compared to our model that was built from scratch
+Transfer learning focuses on storing knowledge gained while solving one problem and applying it to a different but related problem. The VGG neural network is an image classification convolutional neural network that was trained on an immense dataset with over 1000 images. The purpose of using this is to apply the optimized structure to our dataset, since it is a related problem and seeing how well the model performs compared to our model that was built from scratch.
 
+To get the VGG16 to work on our data we had to resize the heighth and width to a minimum of 48 and have a 3 color channel. We changed the input shape for each image to (56,56,3).
 
+Our resulting accuracy was **0.9213** which is even higher then our CNN model that was made from scratch. This just show how powerful and simple it could be to use pre-trained neural networks. 
